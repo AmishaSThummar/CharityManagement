@@ -11,12 +11,10 @@
     <form id="form1" runat="server">
         <div>
             
-       
             <br />
             <br />
             <br />
             
-       
             You are donating for the user:
             <asp:Label ID="lbluserName" runat="server"></asp:Label>
             <br />

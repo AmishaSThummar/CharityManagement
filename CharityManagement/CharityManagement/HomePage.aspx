@@ -17,8 +17,9 @@
         <asp:Button ID="btnProfile" runat="server" OnClick="btn_clickViewProfile" Text="View Profile" />
         <br />
         <br />
-        Your Donations
         <br />
+        Your Donations
+        
         <br />
         <asp:Label ID="lbldonation" runat="server"></asp:Label>
         <br />
@@ -36,8 +37,9 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
         <br />
-        All Fund raises by you<br />
         <br />
+        All Fund raises by you<br />
+        
         <asp:Label ID="lblfunds" runat="server"></asp:Label>
         <br />
         <asp:GridView ID="display_funds" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">

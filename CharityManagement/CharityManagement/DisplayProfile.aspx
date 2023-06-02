@@ -30,7 +30,12 @@
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
             <br />
-            <asp:SqlDataSource ID="ProfileManagement" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [users] WHERE [u_id] = @u_id" InsertCommand="INSERT INTO [users] ([name], [email], [phone], [password]) VALUES (@name, @email, @phone, @password)" SelectCommand="SELECT * FROM [users] WHERE ([u_id] = @u_id)" UpdateCommand="UPDATE [users] SET [name] = @name, [email] = @email, [phone] = @phone, [password] = @password WHERE [u_id] = @u_id">
+            <asp:SqlDataSource ID="ProfileManagement" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                DeleteCommand="DELETE FROM [users] WHERE [u_id] = @u_id" 
+                InsertCommand="INSERT INTO [users] ([name], [email], [phone], [password]) VALUES (@name, @email, @phone, @password)" 
+                SelectCommand="SELECT * FROM [users] WHERE ([u_id] = @u_id)" 
+                UpdateCommand="UPDATE [users] SET [name] = @name, [email] = @email, [phone] = @phone, [password] = @password WHERE [u_id] = @u_id">
+
                 <DeleteParameters>
                     <asp:Parameter Name="u_id" Type="Int32" />
                 </DeleteParameters>

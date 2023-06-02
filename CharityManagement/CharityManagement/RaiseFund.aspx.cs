@@ -15,6 +15,8 @@ namespace CharityManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //it is automatic jQuery validation for that we need to add library jquery.validate.unobtrusive.min.js
+            //here we are disabling it.
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
@@ -45,7 +47,7 @@ namespace CharityManagement
                 try
                 {
                     string extension = Path.GetExtension(FileUploadimage.FileName);
-                    if (extension == ".jpg" || extension == ".png")
+                    if (extension == ".jpg" || extension == ".jpeg" || extension == ".png")
                     {
                         if (FileUploadimage.PostedFile.ContentLength < 102400)
                         {

@@ -38,7 +38,7 @@
                  SortExpression="status" />
                     <asp:TemplateField HeaderText="Image">
                         <ItemTemplate>
-                            <img src="Images/<%#Eval("photo") %>" style="width:80px; height:100px;"/>
+                            <img src="Images/<%#Eval("photo") %>" style="width:150px; height:150px;"/>
                         </ItemTemplate>
                     </asp:TemplateField>
          </Columns>

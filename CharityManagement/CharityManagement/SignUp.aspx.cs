@@ -21,7 +21,7 @@ namespace CharityManagement
             if (Page.IsValid)
             {
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anshi\OneDrive\Documents\Sem_5_material\WAD\Raise Fund\RaiseFund\RaiseFund\App_Data\users.mdf;Integrated Security=True";
+
                 con.ConnectionString = ConfigurationManager.ConnectionStrings["db_connection"].ConnectionString;
                 
                 try

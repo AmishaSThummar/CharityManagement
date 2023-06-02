@@ -47,7 +47,7 @@ namespace CharityManagement
                     rdr.Close();
                     con.Close();
 
-                    string command1 = "Select * from raisefunds where userId=" + Session["id"];
+                    string command1 = "Select cause,description,total_amount,gathered_amount,status from raisefunds where userId=" + Session["id"];
                     SqlCommand cmd1 = new SqlCommand(command1, con);
                     con.Open();
                     SqlDataReader rdr1 = cmd1.ExecuteReader();

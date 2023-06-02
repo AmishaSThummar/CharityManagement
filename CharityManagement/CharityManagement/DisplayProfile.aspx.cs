@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,15 +13,25 @@ namespace CharityManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void DeleteProfile(object sender, GridViewDeleteEventArgs e)
         {
-            if (e.Cancel)
+            SqlConnection conStr = new SqlConnection();
+            conStr.ConnectionString = ConfigurationManager.ConnectionStrings["db_connection"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conStr;
+            cmd.CommandText = "DELETE FROM [users] WHERE [u_id] = '" + Session["id"] + "'";
+            using (conStr)
             {
-                Response.Write("You can't delete untill you delete all funds raised by you.");
+                conStr.Open();
+                cmd.ExecuteNonQuery();
             }
+
+            Session.RemoveAll();
+            Response.Redirect("Login.aspx");
+            
         }
 
         protected void btn_clickHome(object sender, EventArgs e)
